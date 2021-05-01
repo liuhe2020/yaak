@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="Yaak" content="online chat room application" />
+    <meta
+      name="keywords"
+      content="online chatting app, chat app, live chat, chat room, chatroom, message app, messaging"
+    />
+    <link rel="shortcut icon" href="img/yaak_logo_favicon.png" />
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+    <title>Yaak</title>
+  </head>
+
+  <body>
+    <header class="header">
+      <div class="sidebar-top">
+        <div class="user">
+          <!-- User profile template
+            <img class="user-avatar" src="./img/user.png" alt="user_photo">
+            <h3 class="username">User Name</h3>-->
+        </div>
+        <span class="material-icons signout-button"> exit_to_app </span>
+      </div>
+
+      <div class="sidebar-bot">
+        <h2>CHAT ROOMS</h2>
+        <!-- Add chat room component in the future when I figure out how 
+        <div class="add-room">
+          <span class="material-icons">add</span>
+          <p class="room-add">Add Room</p>
+        </div> -->
+        <ul class="chatrooms">
+          <li class="room active" id="General">General</li>
+          <li class="room" id="Latest News">Latest News</li>
+          <li class="room" id="Tech Talk">Tech Talk</li>
+          <li class="room" id="Meme Meet">Meme Meet</li>
+          <li class="room" id="Gossip Gibber">Gossip Gibber</li>
+        </ul>
+      </div>
+    </header>
+
+    <main class="main">
+      <div class="main-top">
+        <img src="img/yaak_logo_full.png" alt="yaak_logo" />
+        <div class="nav-icons">
+          <span class="material-icons menu-icon">menu</span>
+          <span class="material-icons clear-icon">clear</span>
+        </div>
+        <h1 class="room-title">General</h1>
+      </div>
+
+      <div class="main-mid">
+        <div class="chat-container">
+          <ul class="chat-list">
+            <!--list of chat upon user input via JS-->
+            <!-- <li class="chat">
+                  <img class="user-photo" src="" alt="">
+                  <div class="message-container">
+                    <div class="message-top">
+                      <h3 class="username">username</h3>
+                      <p class="time">timestamp</p>
+                    </div>  
+                    <p class="message">message</p>
+                  </div>
+                </li> -->
+          </ul>
+          <div class="emoticons-container"></div>
+        </div>
+      </div>
+
+      <div class="main-bot">
+        <form class="form">
+          <input
+            class="input"
+            type="text"
+            id="message"
+            placeholder="Type your message here"
+          />
+          <span class="material-icons emotion-button">insert_emoticon</span>
+          <span class="material-icons clear-button">clear</span>
+          <button class="send" type="submit">
+            <span class="material-icons">send</span>
+          </button>
+        </form>
+      </div>
+    </main>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/date-fns/1.30.1/date_fns.min.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.3.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.3.1/firebase-firestore.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.3.2/firebase-auth.js"></script>
+    <script src="firebase.js"></script>
+    <script src="chat.js"></script>
+    <script src="emoticon.js"></script>
+    <script src="app.js"></script>
+  </body>
+</html>
