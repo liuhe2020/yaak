@@ -1,6 +1,6 @@
 # Yaak
 
-![Yaak](img/yaak.jpg)
+![Yaak](public/img/yaak.jpg)
 
 Yaak chatroom is an online chat app with multi-rooms support. Users can log in with Google or Facebook and chat to one another. It also supports emojis. Yaak was built with HTML, SASS and vanilla JavaScript, utilising Firebase for data storage and user authentication.
 
